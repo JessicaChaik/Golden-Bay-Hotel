@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <title>Sign Up Login Page</title>
+       <link rel="stylesheet" type="text/css" href="SignUpLogin.css">
+</head>
+        
+<body>
+        <!--Navbar-->
+        <div class="topnav">
+                <a href="SignUpLogIn.html" id="active">LOG-IN/SIGN-UP</a>
+                <a href="ContactUs.html">CONTACT US</a>
+                    <div class="dropdown">
+                            <button class="dropbtn">FACILITIES</button>
+                                <div class="dropdown-content">
+                                            <a href="Spa.html">SPA</a>
+                                            <a href="Meeting.html">MEETING EVENTS</a>
+                                            <a href="Wedding.html">WEDDING EVENTS</a>
+                                </div>
+                                </div> 
+                                <a href="AboutGoldenBay.html">ABOUT GOLDEN BAY</a>
+                                <a href="Room&Suites.html">ROOM & SUITES</a>
+                                <img src="Assets/images/GB1.png" usemap="#test" alt="companyLogo" style="height:100px;"></a>
+                                <map name="test">
+                                    <area shape="rect" coords="0,0,500,300" href="HomePage.html">
+                                </map>
+                    </div>
+
+        <div class="bg-img">
+            
+            <form action="/SignUpLogin.html" class="container">
+                
+                        <h1>Reservation</h1>
+                
+                        <!-- Email-->
+                        <label for="email">Email</label><br>
+                        <input id="email" type="text" placeholder="Enter Email" name="email" required>  
+                        
+                        <!--Password-->
+                        <label for="psw">Password</label><br>
+                        <input type="password" id="psw" name="psw" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>                           
+
+                        <!--checkbox-->
+                        <input type="checkbox" id="checkbox">Keep me signed in  
+                        
+                        <!--submit button-->
+                        <input type="submit" class="btn" value="Submit"></input>
+
+                        <!-- Password validate message-->
+                        <div id="message">
+                            <h3>Password must contain the following:</h3>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+
+                         <!--Forgotpassword-->
+                        <a href="ForgotPassword.html" id="Forgotpsw">Forgot Password?</a></p>
+
+                         <!--Sign Up new account-->
+                        <p>Sign up for new account</p><a href="CreateAccount.html" id="member">Create Account</a></p>
+            </form>  
+
+                    <!--Password validation-->
+                    <script>    
+                    var myInput = document.getElementById("psw");
+                    var letter = document.getElementById("letter");
+                    var capital = document.getElementById("capital");
+                    var number = document.getElementById("number");
+                    var length = document.getElementById("length");
+                    
+                    // click on the password field, show the message box
+                    myInput.onfocus = function() {
+                      document.getElementById("message").style.display = "block";
+                    }
+                    
+                    // click outside of the password field, hide the message box
+                    myInput.onblur = function() {
+                      document.getElementById("message").style.display = "none";
+                    }
+                    
+                    // type in password field
+                    myInput.onkeyup = function() {
+                      // Validate lowercase letters
+                      var lowerCaseLetters = /[a-z]/g;
+                      if(myInput.value.match(lowerCaseLetters)) {
+                        letter.classList.remove("invalid");
+                        letter.classList.add("valid");
+                      } else {
+                        letter.classList.remove("valid");
+                        letter.classList.add("invalid");
+                    }
+                    
+                      // Validate capital letters
+                      var upperCaseLetters = /[A-Z]/g;
+                      if(myInput.value.match(upperCaseLetters)) {
+                        capital.classList.remove("invalid");
+                        capital.classList.add("valid");
+                      } else {
+                        capital.classList.remove("valid");
+                        capital.classList.add("invalid");
+                      }
+                    
+                      // Validate numbers
+                      var numbers = /[0-9]/g;
+                      if(myInput.value.match(numbers)) {
+                        number.classList.remove("invalid");
+                        number.classList.add("valid");
+                      } else {
+                        number.classList.remove("valid");
+                        number.classList.add("invalid");
+                      }
+                    
+                      // Validate length
+                      if(myInput.value.length >= 8) {
+                        length.classList.remove("invalid");
+                        length.classList.add("valid");
+                      } else {
+                        length.classList.remove("valid");
+                        length.classList.add("invalid");
+                      }
+
+
+                    }
+                 </script>
+            </div>
+
+                <footer>
+                    <p id="pfooter"> 
+                            Email: contact@goldenbay.com<br>
+                            Tel: +65 6345 2233<br>
+                            Fax: +65 6298 9228<br>
+                            Address: 70 Jellicoe Road, Golden Bay 208767<br>
+                            Company Registration Number: 200027698768<br>
+                    </p>
+                </footer>
+            <br>
+                    <p class="Follow">Follow Us:
+                        <br><br>
+                        <img src="Assets/images/FB.png" alt="FB" height="30px" width="30px">
+                        <img src="Assets/images/TW.png" alt="TW" height="30px" width="30px">
+                        <img src="Assets/images/LK.png" alt="LK" height="30px" width="30px">
+                    </p>
+                    <p class="Follow">
+                        Copyright@ Golden Bay Hotel, 2018. All right reserved.
+                    </p>
+            <br>
+</body>
+</html>

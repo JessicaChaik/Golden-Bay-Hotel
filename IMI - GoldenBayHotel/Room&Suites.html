@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <style>
+            .topnav {
+                overflow : hidden;
+                background-color :white;
+                font-family : montserrat;
+                margin : 0;
+                padding : 0;
+            }
+                    
+            .img {
+                float : left;
+                display : none;
+                color : grey;
+                padding : 0px;
+            }
+                    
+            .topnav a {
+                float : right;
+                display : block;
+                color : grey;
+                text-align : center;
+                padding : 40px 30px;
+                text-decoration : none;
+                font-size : 16px;
+                font-weight : 300;
+                line-weight : 1.8;
+            }
+                    
+            #active {
+                background-color : #daa520;
+                color : white;
+            }
+                    
+            .topnav .icon {
+                display : none;
+            }
+                    
+            .dropdown {
+                float : right;
+                overflow : hidden;
+            }
+                    
+            .dropdown .dropbtn {
+                font-size : 17px;    
+                border : none;
+                outline : none;
+                color : grey;
+                padding : 40px 30px;
+                background-color : inherit;
+                font-family : montserrat;
+                font-size : 16px;
+                font-weight : 300;
+                margin : 0;
+            }
+                    
+            .dropdown-content {
+                display : none;
+                position : absolute;
+                background-color : #f9f9f9;
+                min-width : 160px;
+                box-shadow : 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index : 1;
+            }
+                    
+            .dropdown-content a {
+                float : none;
+                color : grey;
+                padding : 12px 16px;
+                text-decoration : none;
+                display : block;
+                text-align : left;
+            }
+                    
+            .topnav a:hover, .dropdown:hover .dropbtn {
+                background-color : #daa520;
+                color : white;
+            }
+                    
+            .dropdown-content a:hover {
+                background-color : #daa520;
+                color : white;
+            }
+                    
+            .dropdown:hover .dropdown-content {
+                display : block;
+            }
+
+            .Header {
+            text-align : center; 
+            margin-left : auto; 
+            margin-right : auto; 
+            width : 1100px; 
+            color :	#9c9494; 
+            font-family : montserrat; 
+            font-weight : 330; 
+            font-size : 18px; 
+            line-height : 35px;
+            }
+
+            .h1 {
+            text-align : center; 
+            margin-left : auto; 
+            margin-right : auto; 
+            width : 1100px; 
+            color :	#9c9494;
+            font-family : montserrat; 
+            font-weight : 330; 
+            font-size : 18px; 
+            line-height : 20px;
+            }
+
+            .img {
+            float : right;
+            }
+
+            legend {
+                background-color: #9c9494;
+                color: #fff;
+                padding: 3px 6px;
+            }
+
+            .output {
+                font: 1rem 'Fira Sans', sans-serif;
+            }
+
+            input {
+                margin: .4rem;
+                width: 60%;
+            }
+
+            label {
+                text-align: left;
+            }
+
+            #Start{
+                font-family:  montserrat; 
+            }
+
+            #End{
+                font-family:  montserrat; 
+            }
+
+            .img {
+                float : center;
+                display : none;
+                color : grey;
+                padding : 0px;
+            }
+
+            footer{
+            background-color: #afaead;
+            color : white; 
+            padding-top: 10px; 
+            padding-bottom:15px; 
+            padding-left : 20px;
+            height :160px; 
+            width :98.5%; 
+            color :grey; 
+            font-weight: lighter; 
+            font-family: montserrat; 
+            font-size:18px;
+            }
+
+            #pfooter{
+            font-size: 18px; 
+            text-align: left; 
+            margin-left: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color : white;
+            line-height : 40px;
+            text-align: left;
+            font-weight: light;
+            line-height: 30px;
+            }
+
+            .Follow {
+            font-weight: light; 
+            font-family: montserrat; 
+            font-size:13px;
+            text-align : center;
+            color : #afaead;
+            } 
+
+            .fields-parent-div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fields-div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .field-select {
+                font-family: montserrat;
+                margin: 0.4rem;
+                padding: 5px;
+            }
+
+            .button {
+                background-color: goldenrod;
+                border: none;
+                color: white;
+                padding: 10px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                width:250px;
+                height: 40px;
+            }
+
+            .button4 {
+                border-radius: 12px;
+                font-family: montserrat;
+                }
+        </style>
+</head>
+    <body>
+                <div class="topnav" id="myTopnav">
+                    <a href="SignUpLogIn.html">LOG-IN/SIGN-UP</a>
+                        <a href="ContactUs.html" >CONTACT US</a>
+                            <div class="dropdown">
+                                <button class="dropbtn">FACILITIES 
+                            <i class="fa fa-caret-down"></i>
+                             </button>
+                                    <div class="dropdown-content">
+                                             <a href="Spa.html">SPA</a>
+                                            <a href="Meeting.html">MEETING EVENTS</a>
+                                            <a href="Wedding.html">WEDDING EVENTS</a>
+                                    </div>
+                </div>
+                        <a href="AboutGoldenBay.html">ABOUT GOLDEN BAY</a>
+                        <a href="Room&Suites.html" id="active">ROOM & SUITES</a>
+                        <img src="Assets/images/GB1.png" usemap="#test" alt="companyLogo" style="height:100px;"></a>
+                        <map name="test">
+                            <area shape="rect" coords="0,0,500,300" href="HomePage.html">
+                        </map>
+                        </div>
+<br><br>
+        <div class="Header">
+            <img src="Assets/images/RS.png" height=320 width=100%><br><br>
+                    <h1>Accomodation</h1>
+                            <p style="font-size: 20px; text-align: center;"> 
+                                Rooms at Santorini Palace are bright and modernly furnished 
+                                with air conditioning, a satellite, flat-screen TV, fridge, private bathroom, balcony or veranda, 
+                                double-glazed windows and safety boxes. 
+                            </p>
+        
+<br><br>
+            
+        <fieldset>
+            <legend>Choose trip dates</legend>
+                <div class='fields-parent-div'>
+                        <div class='fields-div'>
+                            <label for="Start">Start</label>
+                            <label for="End">End</label>   
+                            <label for="Adults">Adults</label>   
+                            <label for="Kids">Kids</label>
+                            <label>Room Type</label>   
+                        </div>
+                            <div class='fields-div'>
+                                <input type="date" id="Start" name="trip">
+                                <input type="date" id="End" name="trip">
+                                <input type="number" id="Adults" min="0" max="4" placeholder="0">
+                                <input type="number" id="Kids" min="0" max="4" placeholder="0">
+                                            <select class="field-select">
+                                                <option>Standard Double Room</option>
+                                                <option>Standard Double Room With Private Balcony</option>
+                                                <option>Suites With Outdoor Jacuzzi</option>
+                                            </select>
+                            </div>
+                </div>
+            <button class="button button4">Search</button>
+        </fieldset>
+
+<br><br><br>
+
+</form>
+          <table style="border:none" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="border:none" valign="top" vertical-align:"top"; width="50%">
+                                <div><img src="Assets/images/RS1.png" style="border: none; alt="Room1" width="550" height="320"></div>
+                            </td>
+                                <td style="border:none" valign="top" vertical-align:middle;>
+                                    <div style="padding: 20px; font-size: 18px; font-weight:280; font-family: montserrat; align="justify" valign="top">
+                                        <p style="font-size: 30px; font-weight:380; font-family: montserrat; align="justify">Standard Double Room<br></p> 
+                                        <p>One double bed or two twin beds with air-conditioning (heat & cold), mini fridge, direct dial telephone, 
+                                        satellite-TV (No Greek channels available), private safety deposit box, hairdryer, bathtub or shower, 
+                                        balcony with view to the inner courtyard of the hotel.</p></div>                      
+                                </td>
+                        </tbody>
+            </table><br><br><br>
+
+            <table style="border:none" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>            
+                        <td style="border:none" valign="top" vertical-align:middle;>
+                            <div style="padding: 20px; font-size: 18px; font-weight:280; font-family: montserrat; align="justify" valign="top">
+                                    <p style="font-size: 30px; font-weight:380; font-family: montserrat; align="justify">Standard Double Room With Private Balcony<br></p> 
+                                    <p>
+                                        One double bed or two twin beds with air-conditioning (heat & cold), mini fridge, direct dial telephone, 
+                                        satellite-TV (No Greek channels available), private safety deposit box, hairdryer, bathtub or shower, 
+                                        balcony with view to the pool or the eastern part of the island.
+                                    </p>
+                            </div>                      
+                        </td>
+                                <td style="border:none" valign="top" vertical-align:"top"; width="50%"> 
+                                    <div><img src="Assets/images/RS2.png" style="border: none; alt="Room2" width="550" height="320"></div>
+                                </td>
+                     </tr>
+                    </tbody>
+            </table><br><br><br>
+            <table style="border:none" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td style="border:none" valign="top" vertical-align:"top"; width="50%">
+                        <div><img src="Assets/images/R11.jpg" style="border: none; alt="Room1" width="550" height="320"></div>
+                    </td>
+                    <td style="border:none" valign="top" vertical-align:middle;>
+                        <div style="padding: 20px; font-size: 18px; font-weight:280; font-family: montserrat; align="justify" valign="top">
+                            <p style="font-size: 30px; font-weight:380; font-family: montserrat; align="justify" ">Suites With Outdoor Jacuzzi<br></p> 
+                            <p>One double bed or two twin beds with air-conditioning (heat & cold), mini fridge, direct dial telephone, 
+                            satellite-TV (No Greek channels available), private safety deposit box, hairdryer, bathtub or shower, 
+                            balcony, juzzuziz with view of the Santorini.</p></div>                      
+                    </td>
+                  </tbody>
+              </table><br><br>
+              </div>
+
+                <footer>
+                        <p id="pfooter"> 
+                                Email: contact@goldenbay.com<br>
+                                Tel: +65 6345 2233<br>
+                                Fax: +65 6298 9228<br>
+                                Address: 70 Jellicoe Road, Golden Bay 208767<br>
+                                Company Registration Number: 200027698768<br>
+                        </p>
+                </footer>
+        <br>
+            <p class="Follow">Follow Us:
+            <br><br>
+                    <img src="Assets/images/FB.png" alt="FB" height="30px" width="30px">
+                    <img src="Assets/images/TW.png" alt="TW" height="30px" width="30px">
+                    <img src="Assets/images/LK.png" alt="LK" height="30px" width="30px">
+            </p>
+                <p class="Follow">
+                        Copyright@ Golden Bay Hotel, 2018. All right reserved.
+                </p>
+        <br>
+   </body>
+</html>
+    
